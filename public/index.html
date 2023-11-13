@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cartoon Shows</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Adult Cartoon Collection</h1>
+        <button id="add-cartoon-button">Add Show</button>
+    </header>
+
+    <main>
+        <section id="cartoon-list" class="cartoon-list"></section>
+
+        <div id="cartoon-form-container" class="hidden">
+            <form id="cartoon-form" enctype="multipart/form-data">
+                <input type="hidden" name="_id" value="-1">
+                
+                <label for="title">Title:</label>
+      <input type="text" id="title" name="title" required>
+
+      <label for="humor">Humor:</label>
+      <input type="text" id="humor" name="humor" required>
+
+      <label for="animationStyle">Animation Style:</label>
+      <input type="text" id="animationStyle" name="animationStyle" required>
+
+      <label for="releaseYear">Release Year:</label>
+      <input type="number" id="releaseYear" name="releaseYear" required>
+
+      <label for="mainSetting">Main Setting:</label>
+      <input type="text" id="mainSetting" name="mainSetting">
+
+      <label for="notableCharacters">Notable Characters (separated by commas):</label>
+      <input type="text" id="notableCharacters" name="notableCharacters">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
