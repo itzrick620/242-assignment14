@@ -81,7 +81,7 @@ app.post("/api/cartoons", upload.single("cover"), (req, res) => {
         animationStyle: req.body.animationStyle,
         releaseYear: req.body.releaseYear,
         mainSetting: req.body.mainSetting,
-        notableCharacters: req.body.notableCharacters.split(",")
+        notableCharacters: Array.isArray(req.body.notableCharacters) ? req.body.notableCharacters : req.body.notableCharacters.split(",")
     }
 
     cartoons.push(cartoon);
